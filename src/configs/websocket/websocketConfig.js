@@ -6,5 +6,10 @@ exports.setupWebsocket = (io) => {
         let { user_id } = socket.handshake.query;
         let websocket_id = socket.id;
         // await connection('users').where('id',user_id).update('websocketId',websocket_id);
+
+        socket.on('message', data => {
+            io.emit('message',data);
+        });
     });
+
 }
