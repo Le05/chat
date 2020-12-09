@@ -11,7 +11,7 @@
   <script>
     var socket;
     $(document).ready(function(){
-    socket = io.connect("http://localhost:3000");
+    socket = io.connect("http://172.25.12.232:3000");
 
     setInterval(() => {
       socket.emit('message','Ab');
