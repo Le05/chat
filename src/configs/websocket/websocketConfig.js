@@ -2,7 +2,7 @@
 
 exports.setupWebsocket = (io) => {
     //quando connectar eu vou fazer isso
-    io.on('connection',connection());
+    io.on('connection', socket => connection(io,socket));
 }
 
 function connection(io,socket){
